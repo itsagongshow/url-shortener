@@ -1,4 +1,7 @@
+name: AWS CDK Deploy
+
 on: [push, workflow_dispatch]
+
 jobs:
   aws_cdk:
     runs-on: ubuntu-latest
@@ -7,12 +10,16 @@ jobs:
         uses: actions/checkout@v3
       - uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: "16"
+      - name: Install CDK and Dependencies
+        run: |
+          npm install -g aws-cdk
+          npm install
       - name: Configure aws credentials
         uses: aws-actions/configure-aws-credentials@master
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: 'ca-central-1'
       - name: Install dependencies
         run: yarn
