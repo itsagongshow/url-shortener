@@ -42,7 +42,6 @@ You can then simply use the `short_id` URL to access the page:
 curl -XGET https://4373rw3nwk.execute-api.ca-central-1.amazonaws.com/prod/t/<short_id>
 ```
 
-
 Example:
 ```
 curl -XPOST -H "Content-Type: application/json" https://4373rw3nwk.execute-api.ca-central-1.amazonaws.com/prod/create -d '{"long_url": "https://www.google.com/search?q=battlefy&oq=battlefy&aqs=edge.0.69i59l3j0i273j0i512l2j69i60j69i61l2.1073j0j1&sourceid=chrome&ie=UTF-8"}'
@@ -56,6 +55,8 @@ Performing a GET will output:
 ```
 curl -XGET https://4373rw3nwk.execute-api.ca-central-1.amazonaws.com/prod/t/zZSFx8SpLqvyvLD
 ```
+And will also redirect you to the original URL if used in a browser.
+
 Output
 ```
 {"statusCode": 301, "location": "https://www.google.com/search?q=battlefy&oq=battlefy&aqs=edge.0.69i59l3j0i273j0i512l2j69i60j69i61l2.1073j0j1&sourceid=chrome&ie=UTF-8"}
