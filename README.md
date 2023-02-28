@@ -55,7 +55,7 @@ Performing a GET will output:
 ```
 curl -XGET https://4373rw3nwk.execute-api.ca-central-1.amazonaws.com/prod/t/zZSFx8SpLqvyvLD
 ```
-And will also redirect you to the original URL if used in a browser.
+And will also redirect you to the original URL if link is used in a browser.
 
 Output
 ```
