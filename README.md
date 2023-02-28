@@ -40,6 +40,7 @@ Example:
 ```
 curl -XPOST -H "Content-Type: application/json" https://hf3ku92xf2.execute-api.ca-central-1.amazonaws.com/prod/create -d '{"long_url": "https://www.google.com/search?q=battlefy"}'
 ```
+Output
 ```
 {"short_id":"https://hf3ku92xf2.execute-api.ca-central-1.amazonaws.com/prod/t/zjptx","long_url":"https://www.google.com/search?q=battlefy"}
 ```
@@ -48,7 +49,7 @@ You can then simply use the `short_id` URL to access the page. Performing a GET 
 ```
 curl -XGET https://hf3ku92xf2.execute-api.ca-central-1.amazonaws.com/prod/t/zjptx
 ```
-
+Output
 ```
 {"statusCode": 301, "location": "https://www.google.com/search?q=battlefy"}
 ```
