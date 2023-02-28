@@ -53,7 +53,7 @@ def lambda_handler(event, context):
         for k in url_params:
             analytics[k] = url_params[k]
 
-    #put value in dynamodb table
+    # Put value in dynamodb table
     response = ddb.put_item(
         Item={
             'short_id': short_id,
