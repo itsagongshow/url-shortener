@@ -28,7 +28,7 @@ No installation needed. Simply run the aws-deploy Github Actions workflow with t
 
 Once the Github Action is run and deployed, you can find the API Gateway URL from the `Deploy Stack` step.
 
-![alt text](https://i.ibb.co/0qSBkQk/image.png)
+![alt text](https://i.ibb.co/qxnfcyy/image.png))
 
 You can now create shortened URL by running:
 
