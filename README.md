@@ -24,6 +24,8 @@ It must have access to CloudFormation, API Gateways, DynamoDb and Lambdas. The s
 
 No installation needed. Simply run the aws-deploy Github Actions workflow with the specified requirements.
 
+> Note: `https://4373rw3nwk.execute-api.ca-central-1.amazonaws.com/prod/` is online and can be used to create shortened URL.
+
 ## Usage
 
 Once the Github Action is run and deployed, you can find the API Gateway URL from the `Deploy Stack` step.
@@ -40,7 +42,6 @@ You can then simply use the `short_id` URL to access the page:
 curl -XGET https://4373rw3nwk.execute-api.ca-central-1.amazonaws.com/prod/t/<short_id>
 ```
 
-> Note: `https://4373rw3nwk.execute-api.ca-central-1.amazonaws.com/prod/` is online and can be used to create shortened URL.
 
 Example:
 ```
