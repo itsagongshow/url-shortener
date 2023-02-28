@@ -35,7 +35,10 @@ You can now create shortened URL by running:
 ```
 curl -XPOST -H "Content-Type: application/json" https://4373rw3nwk.execute-api.ca-central-1.amazonaws.com/prod/create -d '{"long_url": "<URL>"}'
 ```
-
+You can then simply use the `short_id` URL to access the page:
+```
+curl -XGET https://4373rw3nwk.execute-api.ca-central-1.amazonaws.com/prod/t/<short_id>
+```
 
 > Note: `https://4373rw3nwk.execute-api.ca-central-1.amazonaws.com/prod/` is online and can be used to create shortened URL.
 
@@ -48,7 +51,7 @@ Output
 {"short_id":"https://4373rw3nwk.execute-api.ca-central-1.amazonaws.com/prod/t/zZSFx8SpLqvyvLD","long_url":"https://www.google.com/search?q=battlefy&oq=battlefy&aqs=edge.0.69i59l3j0i273j0i512l2j69i60j69i61l2.1073j0j1&sourceid=chrome&ie=UTF-8"}
 ```
 
-You can then simply use the `short_id` URL to access the page. Performing a GET will output
+Performing a GET will output:
 ```
 curl -XGET https://4373rw3nwk.execute-api.ca-central-1.amazonaws.com/prod/t/zZSFx8SpLqvyvLD
 ```
