@@ -70,7 +70,7 @@ There are multiple angles for throttling:
 - AWS Regional throttling
 
 ### Minimizing Costs
-Setting DynamoDB to use `use-demand` should reduce cost but should be monitored in case there is a sudden increase in load. However, I do not think this feature should have a sudden increase in cost. Also there really is only one table usage for this feature. Another way to reduce cost is preferrably to setup DynamoDB is a zone with lesser costs. You can also use CloudFront to reduce data transfer costs. Although in this case, I'm not sure that is necessary.
+Setting DynamoDB to use `use-demand` should reduce cost but should be monitored in case there is a sudden increase in load. However, currently there really is only one table in the DB. Another way to reduce cost is preferrably to setup DynamoDB is a zone with lesser costs. You can also use CloudFront to reduce data transfer costs. Although in this case, I'm not sure that is necessary. You can also limit how many API calls users can over time.
 
 ### Security
 You can protect the API but limiting where you can access it such us locking it behind the VPN. Also using a Lambda Authorizer should be able to control who can perform what. You can also setup a firewall and set throttling targets. 
