@@ -33,8 +33,11 @@ Once the Github Action is run and deployed, you can find the API Gateway URL fro
 You can now create shortened URL by running:
 
 ```
-curl -XPOST -H "Content-Type: application/json" https://hf3ku92xf2.execute-api.ca-central-1.amazonaws.com/prod/create -d '{"long_url": "<URL>"}'
+curl -XPOST -H "Content-Type: application/json" https://4373rw3nwk.execute-api.ca-central-1.amazonaws.com/prod/create -d '{"long_url": "<URL>"}'
 ```
+
+
+> Note: `https://4373rw3nwk.execute-api.ca-central-1.amazonaws.com/prod/` is online and can be used to create shortened URL.
 
 Example:
 ```
